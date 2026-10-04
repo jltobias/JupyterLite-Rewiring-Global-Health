@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#04111f"/><stop offset="1" stop-color="#0a2540"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#2bdcff" stop-opacity=".75"/><stop offset="1" stop-color="#2bdcff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="820" cy="410" r="310" fill="url(#glow)"/>
+<circle cx="820" cy="410" r="205" fill="#0b567b" stroke="#54dfff" stroke-width="5"/>
+<path d="M700 325c65-65 190-70 260-5M680 430c85 60 230 75 310 15M820 210v400M620 410h400" fill="none" stroke="#6fe8ff" stroke-opacity=".55" stroke-width="3"/>
+<g stroke="#32d6ff" stroke-width="4" fill="none">
+<path d="M250 220C470 250 560 300 650 350"/><path d="M1350 220C1120 255 1060 300 990 350"/>
+<path d="M230 650C470 610 560 550 650 485"/><path d="M1370 650C1130 610 1060 550 990 485"/>
+</g>
+<g fill="#f5fbff" font-family="Arial,sans-serif">
+<text x="80" y="105" font-size="70" font-weight="700">Rewiring Global Health</text>
+<text x="80" y="175" font-size="60" font-weight="700" fill="#f6e84a">for the Age of AI</text>
+<text x="85" y="225" font-size="28" fill="#b8d8f0">JupyterLite • GeoAI • GIS • Climate • Digital Twins • World Models • Geoprivacy</text>
+<text x="820" y="395" text-anchor="middle" font-size="40" font-weight="700">GEOSPATIAL</text>
+<text x="820" y="445" text-anchor="middle" font-size="40" font-weight="700">INTELLIGENCE</text>
+</g>
+<g font-family="Arial,sans-serif" font-size="30" font-weight="600">
+<rect x="80" y="275" width="310" height="105" rx="18" fill="#132f50" stroke="#7d5cff" stroke-width="3"/><text x="235" y="325" text-anchor="middle" fill="#fff">AI + GeoAI</text><text x="235" y="360" text-anchor="middle" fill="#cfdcff" font-size="21">agents • ML • reasoning</text>
+<rect x="1210" y="275" width="310" height="105" rx="18" fill="#132f50" stroke="#2bdcff" stroke-width="3"/><text x="1365" y="325" text-anchor="middle" fill="#fff">GIS + Spatial Data</text><text x="1365" y="360" text-anchor="middle" fill="#cfefff" font-size="21">2D • 3D • networks</text>
+<rect x="80" y="585" width="310" height="105" rx="18" fill="#132f50" stroke="#4ee08f" stroke-width="3"/><text x="235" y="635" text-anchor="middle" fill="#fff">Climate + EO</text><text x="235" y="670" text-anchor="middle" fill="#d7ffe6" font-size="21">C3S • STAC • Zarr</text>
+<rect x="1210" y="585" width="310" height="105" rx="18" fill="#132f50" stroke="#ffb347" stroke-width="3"/><text x="1365" y="635" text-anchor="middle" fill="#fff">World Models + Twins</text><text x="1365" y="670" text-anchor="middle" fill="#ffe2bd" font-size="21">scenarios • futures • ABM</text>
+</g>
+<rect x="160" y="770" width="1280" height="70" rx="25" fill="#081b2d" stroke="#f06ad8" stroke-width="3"/>
+<text x="800" y="815" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#fff">Privacy • Geoprivacy • Equity • Ethics • Human Agency → Better Health Outcomes</text>
+</svg>
