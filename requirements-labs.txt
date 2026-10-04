@@ -1,0 +1,12 @@
+-r requirements.txt
+nbclient==0.11.0
+nbformat==5.11.1
+ipykernel==7.4.0
+numpy>=2.2,<3
+pandas>=2.2,<4
+matplotlib>=3.9,<4
+folium==0.20.0
+plotly>=6,<8
+xarray==2025.9.0
+zarr==2.18.7
+cryptography>=45,<51

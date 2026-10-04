@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Browser runtime verification</title><body><pre id="log">Loading Pyodide…</pre><script type="module">
+// Test harness only: serve repository root; not part of the published site.
+window.runtimeResults={done:false,results:[],error:null};
+const log=message=>{document.getElementById('log').textContent+='\n'+message;console.log(message);};
+try {
+ const {loadPyodide}=await import('https://cdn.jsdelivr.net/pyodide/v314.0.6/full/pyodide.mjs');
+ const py=await loadPyodide({stdout:()=>{},stderr:message=>console.warn(message)});
+ await py.loadPackage(['micropip','ipython']);
+ py.FS.writeFile('/home/pyodide/rewiring.py',await (await fetch('../notebooks/rewiring.py')).text());
+ py.FS.mkdirTree('/home/pyodide/data');
+ py.FS.writeFile('/home/pyodide/data/stac-snapshot.json',await (await fetch('../notebooks/data/stac-snapshot.json')).text());
+ py.FS.mkdirTree('/home/pyodide/wheels');
+ py.FS.writeFile('/home/pyodide/wheels/asciitree-0.3.3-py3-none-any.whl',new Uint8Array(await (await fetch('../notebooks/wheels/asciitree-0.3.3-py3-none-any.whl')).arrayBuffer()));
+ const names=['00_rewiring_global_health','01_climate_stac_c3s','02_geospatial_intelligence_2d_3d','03_geolibre_3d_scene','04_animated_health_climate_timeseries','05_zarr_sql_views','06_geoai_world_models','07_ai_orchestrator_privacy','08_digital_twin_global_health','09_geoprivacy_map_encryption'];
+ for(const name of names){
+  const only=new URLSearchParams(location.search).get('only');if(only&&!name.startsWith(only))continue;
+  log('RUN '+name);
+  const nb=await (await fetch('../notebooks/'+name+'.ipynb')).json();
+  const globals=py.toPy({__name__:'__main__'});
+  try {
+   for(let index=0;index<nb.cells.length;index++)if(nb.cells[index].cell_type==='code'){
+    const cell=nb.cells[index];
+    try{await py.runPythonAsync(Array.isArray(cell.source)?cell.source.join(''):cell.source,{globals});}
+    catch(error){throw new Error('Cell '+index+': '+error.message);}
+   }
+   await py.runPythonAsync('import matplotlib.pyplot as plt\nplt.close("all")',{globals});
+   window.runtimeResults.results.push({name,status:'PASS'});log('PASS '+name);
+  }catch(error){window.runtimeResults.results.push({name,status:'FAIL',error:error.message});log('FAIL '+name+'\n'+error.message);}
+  finally{globals.destroy();}
+ }
+}catch(error){window.runtimeResults.error=error.message;log('ERROR '+error.message);}
+window.runtimeResults.done=true;
+</script></body></html>

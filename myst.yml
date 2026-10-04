@@ -24,6 +24,8 @@ project:
         - file: notebooks/00_rewiring_global_health.ipynb
         - file: book/architecture.md
         - file: book/ethics-and-geoprivacy.md
+        - file: book/source-presentations.md
+        - file: book/teaching-guide.md
     - title: Geospatial intelligence labs
       children:
         - file: notebooks/01_climate_stac_c3s.ipynb
@@ -38,10 +40,18 @@ project:
         - file: notebooks/07_ai_orchestrator_privacy.ipynb
         - file: notebooks/08_digital_twin_global_health.ipynb
         - file: notebooks/09_geoprivacy_map_encryption.ipynb
+    - title: Sources and stewardship
+      children:
+        - file: DATA_SOURCES.md
+        - file: REFERENCES.md
+        - file: THIRD_PARTY_NOTICES.md
+        - file: LICENSE-CONTENT.md
 site:
   template: book-theme
   title: Rewiring Global Health for the Age of AI
   actions:
+    - title: Explore the demos
+      url: https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/demos/
     - title: Open JupyterLite
       url: https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/lite/lab/index.html
     - title: GitHub repository

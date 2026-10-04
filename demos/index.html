@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Explore · Rewiring Global Health</title><link rel="stylesheet" href="style.css"></head>
+<body><a class="skip" href="#workspace">Skip to the explorer</a>
+<header><a class="brand" href="../">REWIRING <span>GLOBAL HEALTH</span></a><nav aria-label="Main navigation"><a href="../">Read the book</a><a href="../lite/lab/index.html">Run the notebooks</a><a href="scene.html">3D scene ↗</a></nav></header>
+<main><div class="eyebrow">THE AGE OF AI / EXPLORATION LAB</div><h1>One place.<br><em>Many ways to understand.</em></h1>
+<p class="lede">Move through time. Compare places. Inspect the evidence behind the view.</p>
+<div class="notice"><strong>Synthetic data throughout.</strong> This fictional 64-cell grid is anchored near Gaborone to teach geographic coordinates. It does not describe actual people, weather, disease, or services.</div>
+<section id="workspace" aria-label="Interactive data explorer"><div class="toolbar">
+<label>View<select id="view"><option value="map">2D map + linked time series</option><option value="matrix">Map matrix · six months</option><option value="cube">3D space–time cube</option></select></label>
+<label>Measure<select id="metric"><option value="heat_c">Temperature (°C)</option><option value="rate_per_1000">Events per 1,000</option><option value="rain_mm">Rainfall (mm/month)</option></select></label>
+<label class="slider-label">Month <output id="month-label">1</output><input id="month" type="range" min="0" max="23" value="0"></label>
+<button id="play" aria-pressed="false">Play months</button><button id="download">Export current GeoJSON</button>
+</div><div class="work-grid"><div class="panel"><div class="panel-heading"><h2 id="view-title">Spatial view</h2><span id="scale-label"></span></div>
+<div id="spatial" role="group" aria-label="Select a synthetic grid cell"></div><div id="cube" hidden></div><div class="legend"><span>Lower</span><div class="gradient"></div><span>Higher</span></div><p id="view-note" class="caption"></p></div>
+<aside class="panel"><div class="panel-heading"><h2 id="cell-title">Cell 0</h2><span>LINKED VIEW</span></div><p id="cell-summary"></p>
+<div id="series"></div><p class="caption">A common time axis makes change easier to compare. Select a map cell or choose it below.</p>
+<label>Inspect cell<select id="cell-select" aria-label="Selected cell"></select></label>
+<div class="question"><strong>Before you infer:</strong><p>What changed: the underlying process, the denominator, or how the data were collected?</p></div>
+<a class="text-link" href="../lite/lab/index.html?path=04_animated_health_climate_timeseries.ipynb">Open the animation lesson →</a></aside></div>
+<details><summary>Accessible data table · selected month</summary><div class="table-wrap"><table><caption id="table-caption">Synthetic cell values</caption><thead><tr><th>Cell</th><th>Longitude</th><th>Latitude</th><th>Population</th><th id="metric-heading">Value</th></tr></thead><tbody id="table-body"></tbody></table></div></details>
+<p id="status" role="status">Loading the bundled teaching data…</p></section>
+<section class="reading"><article><span>01 / THINK IN SPACE</span><h2>2D before 3D</h2><p>Start with a common color scale. Use an orbitable scene when it helps reveal structure, and keep a flat view and data table available.</p><a href="scene.html">Explore extruded geography →</a></article>
+<article><span>02 / THINK IN TIME</span><h2>Motion and comparison</h2><p>Animation reveals sequence. Small multiples preserve earlier states so you can compare without relying on memory. The cube gives time its own axis.</p><a href="../lite/lab/index.html?path=05_zarr_sql_views.ipynb">Inspect the Zarr + SQL lesson →</a></article>
+<article><span>03 / THINK TOGETHER</span><h2>Ask whose view is missing</h2><p>Data and models need community knowledge, uncertainty, and accountable review. The six-perspective lesson keeps unresolved questions visible.</p><a href="../lite/lab/index.html?path=07_ai_orchestrator_privacy.ipynb">Open the AI deliberation lab →</a></article></section>
+<section class="panel video-panel"><h2>A short visual walkthrough</h2><p>Original silent animation: a synthetic event-rate map and a population-weighted citywide series, with a fixed map color scale. The moving line marks the selected month. No observed health data are shown.</p><video controls preload="none" poster="assets/climate-poster.png" aria-label="Synthetic monthly event rates and linked time series"><source src="assets/climate-story.mp4" type="video/mp4"></video><p><a href="../lite/lab/index.html?path=04_animated_health_climate_timeseries.ipynb">Reproduce the animation in Python</a> · <a href="https://geolibre.app/tutorials/videos/">Creator-hosted GeoLibre video tutorials</a></p></section>
+</main><footer>Original synthetic data and graphics: CC BY 4.0 · Code: MIT · <a href="https://github.com/jltobias/JupyterLite-Rewiring-Global-Health/blob/main/DATA_SOURCES.md">Provenance and credits</a><p>Maps and models support deliberation. They do not establish clinical risk or intervention effectiveness.</p></footer>
+<script src="app.js"></script></body></html>

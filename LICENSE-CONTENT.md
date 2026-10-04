@@ -2,6 +2,8 @@
 
 Unless otherwise noted, original narrative text, diagrams, and graphics created specifically for this repository are licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
 
+This also covers the original generated synthetic datasets and silent visualization video. The supplied composite splash image and all third-party elements, videos, data products, and source presentations retain their respective rights; see the asset register in `DATA_SOURCES.md`.
+
 License summary and legal terms: https://creativecommons.org/licenses/by/4.0/
 
 Suggested attribution:
