@@ -1,0 +1,48 @@
+version: 1
+project:
+  id: 4fa8395e-318e-4bbd-b721-a7285468133c
+  title: Rewiring Global Health for the Age of AI
+  description: Browser-based global-health labs joining AI, GeoAI, GIS, climate data, digital twins, world models, geospatial intelligence, privacy, and ethics.
+  keywords:
+    - global health
+    - artificial intelligence
+    - GeoAI
+    - geospatial intelligence
+    - JupyterLite
+    - climate
+    - STAC
+    - digital twins
+    - world models
+    - geoprivacy
+  authors:
+    - name: James L. Tobias
+  github: jltobias/JupyterLite-Rewiring-Global-Health
+  toc:
+    - file: book/index.md
+    - title: Foundations
+      children:
+        - file: notebooks/00_rewiring_global_health.ipynb
+        - file: book/architecture.md
+        - file: book/ethics-and-geoprivacy.md
+    - title: Geospatial intelligence labs
+      children:
+        - file: notebooks/01_climate_stac_c3s.ipynb
+        - file: notebooks/02_geospatial_intelligence_2d_3d.ipynb
+        - file: notebooks/03_geolibre_3d_scene.ipynb
+        - file: notebooks/04_animated_health_climate_timeseries.ipynb
+        - file: notebooks/05_zarr_sql_views.ipynb
+    - title: AI, world models, and digital twins
+      children:
+        - file: book/world-models.md
+        - file: notebooks/06_geoai_world_models.ipynb
+        - file: notebooks/07_ai_orchestrator_privacy.ipynb
+        - file: notebooks/08_digital_twin_global_health.ipynb
+        - file: notebooks/09_geoprivacy_map_encryption.ipynb
+site:
+  template: book-theme
+  title: Rewiring Global Health for the Age of AI
+  actions:
+    - title: Open JupyterLite
+      url: https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/lite/lab/index.html
+    - title: GitHub repository
+      url: https://github.com/jltobias/JupyterLite-Rewiring-Global-Health
